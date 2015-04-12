@@ -1,0 +1,7 @@
+[user]
+	name = Brenden Yule
+	email = brendenyule@gmail.com
+[push]
+	default = matching
+[alias]
+	co = checkout

@@ -17,6 +17,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 Plugin 'vim-scripts/DrawIt'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tpope/vim-rails'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

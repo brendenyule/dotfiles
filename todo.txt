@@ -1,0 +1,8 @@
+auto link all dotfiles.
+autoinstall vim, tmux, git, curl
+autoinstall railsgirls script
+  rvm reset?
+autoinstall vundle $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+autoinstall tmuxifier git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
+autoinstall apt-get install silversearcher-ag
+

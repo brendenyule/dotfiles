@@ -139,4 +139,4 @@ eval "$(tmuxifier init -)"
 
 alias tmux='tmux -2'
 
-alias ws='tmuxifier w default_rails'
+alias ws='tmuxifier w default-rails'

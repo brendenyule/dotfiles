@@ -18,6 +18,8 @@ Bundle 'kien/ctrlp.vim'
 Plugin 'vim-scripts/DrawIt'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-rails'
+Plugin 'https://github.com/tmhedberg/matchit'
+Plugin 'Lokaltog/vim-easymotion'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -38,8 +40,13 @@ filetype plugin indent on    " required
 set t_Co=256
 colors cobalt2
 set colorcolumn=81
-highlight colorcolumn ctermbg=3
+highlight colorcolumn ctermbg=black
 set number
+
+" ****Swap File****
+" removes clutter files that vim leaves everywhere
+set swapfile
+set dir=~/tmp
 
 " ****General Settings**** "
 set softtabstop=2 shiftwidth=2 expandtab
@@ -58,13 +65,13 @@ nnoremap <leader>s :w<CR>
 map <space> <leader>
 
 " ****Plugin Mods**** "
-let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-      \ --ignore .git
-      \ --ignore .svn
-      \ --ignore .hg
-      \ --ignore .DS_Store
-      \ --ignore "**/*.pyc"
-      \ -g ""'
+"let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      "\ --ignore .git
+      "\ --ignore .svn
+      "\ --ignore .hg
+      "\ --ignore .DS_Store
+      "\ --ignore "**/*.pyc"
+      "\ -g ""'
 
 " ****Syntastic**** "
 set statusline+=%#warningmsg#
@@ -78,3 +85,23 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 nnoremap <leader>e :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+
+" ****NerdTree**** "
+let NERDTreeDirArrows=0
+
+" The Silver Searcher
+ if executable('ag')
+   " Use ag over grep
+     set grepprg=ag\ --nogroup\ --nocolor
+
+       " Use ag in CtrlP for listing files. Lightning fast and respects
+       ".gitignore
+         let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+   "ag is fast enough that CtrlP doesn't need to cache
+     let g:ctrlp_use_caching = 0
+ endif
+
+" ****Easymotion****
+map <Leader> <Plug>(easymotion-prefix)
+map s <Plug>(easymotion-bd-w)

@@ -113,10 +113,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Alias
 alias work='cd /media/removable/"SD Card"/work'
+alias fable='cd "/media/removable/SD Card/work/refable2.0"'
 
+# RVM
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
 source ~/.rvm/scripts/rvm
 
 ### Added by the Heroku Toolbelt
@@ -139,4 +141,4 @@ eval "$(tmuxifier init -)"
 
 alias tmux='tmux -2'
 
-alias ws='tmuxifier w default-rails'
+alias ws='tmuxifier w default_rails'

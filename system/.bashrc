@@ -113,10 +113,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Alias
-alias work='cd /media/removable/"SD Card"/work'
-alias fable='cd "/media/removable/SD Card/work/refable2.0"'
-
 # RVM
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 source ~/.rvm/scripts/rvm
@@ -124,21 +120,10 @@ source ~/.rvm/scripts/rvm
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# Flush term output
-alias cls='printf "\033c"'
-
 # Default editor
 export EDITOR=vim
-
-# ls color problem
-alias ls='ls --color=none'
 
 # Tmuxifier
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 
-# Tmux color problem
-
-alias tmux='tmux -2'
-
-alias ws='tmuxifier w default_rails'

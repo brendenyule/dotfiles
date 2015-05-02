@@ -1,3 +1,6 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" System configuration
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -36,44 +39,52 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" ****Themes**** "
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General Settings
+set softtabstop=2 shiftwidth=2 expandtab
+set mouse=a
+
+set lazyredraw
+set ttyfast
+
+" Shortcuts
+nnoremap <leader>s :w<CR>
+
+" Swap File
+" removes clutter files that vim leaves everywhere
+set swapfile
+set dir=~/tmp
+
+" Themes
 set t_Co=256
 colors cobalt2
 set colorcolumn=81
 highlight colorcolumn ctermbg=black
 set number
 
-" ****Swap File****
-" removes clutter files that vim leaves everywhere
-set swapfile
-set dir=~/tmp
 
-" ****General Settings**** "
-set softtabstop=2 shiftwidth=2 expandtab
-set mouse=a
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin Configuration
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ctrlp
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-set lazyredraw
-set ttyfast
-  
-" ****Shortcuts**** "
-map <C-n> :NERDTreeToggle<CR>
-nnoremap <leader>s :w<CR>
+" Easymotion
+map <Leader> <Plug>(easymotion-prefix)
+map s <Plug>(easymotion-bd-w)
 
-" ****Leaders***** "
+" Leaders
 map <space> <leader>
 
-" ****Plugin Mods**** "
-"let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-      "\ --ignore .git
-      "\ --ignore .svn
-      "\ --ignore .hg
-      "\ --ignore .DS_Store
-      "\ --ignore "**/*.pyc"
-      "\ -g ""'
+" NerdTree
+let NERDTreeDirArrows=0
+map <C-n> :NERDTreeToggle<CR>
 
-" ****Syntastic**** "
+" Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -86,22 +97,15 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 nnoremap <leader>e :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
-" ****NerdTree**** "
-let NERDTreeDirArrows=0
-
 " The Silver Searcher
- if executable('ag')
-   " Use ag over grep
-     set grepprg=ag\ --nogroup\ --nocolor
+if executable('ag')
+ " Use ag over grep
+   set grepprg=ag\ --nogroup\ --nocolor
 
-       " Use ag in CtrlP for listing files. Lightning fast and respects
-       ".gitignore
-         let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+     " Use ag in CtrlP for listing files. Lightning fast and respects
+     ".gitignore
+       let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
-   "ag is fast enough that CtrlP doesn't need to cache
-     let g:ctrlp_use_caching = 0
- endif
-
-" ****Easymotion****
-map <Leader> <Plug>(easymotion-prefix)
-map s <Plug>(easymotion-bd-w)
+ "ag is fast enough that CtrlP doesn't need to cache
+   let g:ctrlp_use_caching = 0
+endif

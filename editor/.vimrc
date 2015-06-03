@@ -23,6 +23,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-rails'
 Plugin 'https://github.com/tmhedberg/matchit'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'Yggdroot/indentLine'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

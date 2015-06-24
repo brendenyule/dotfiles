@@ -9,3 +9,6 @@ alias cls='printf "\033c"'
 # Tmux color problem
 # alias tmux='tmux -2'
 
+alias news='newsbeuter'
+
+alias feed='tmux new-session -s feed "tmuxifier w feed"'

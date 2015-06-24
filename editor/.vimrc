@@ -61,7 +61,10 @@ set dir=~/tmp
 
 " Themes
 set t_Co=256
-colors cobalt2
+"colors cobalt2
+colors gruvbox
+:syntax on
+set background=dark
 set colorcolumn=81
 highlight colorcolumn ctermbg=black
 set number

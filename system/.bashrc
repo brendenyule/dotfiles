@@ -120,10 +120,15 @@ source ~/.rvm/scripts/rvm
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# Default browser
+export BROWSER=lynx 
+
 # Default editor
 export EDITOR=vim
 
 # Tmuxifier
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
+
+BASH_ENV=$HOME/.zshenv
 

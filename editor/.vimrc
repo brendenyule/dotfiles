@@ -18,12 +18,12 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
-Plugin 'vim-scripts/DrawIt'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-rails'
 Plugin 'https://github.com/tmhedberg/matchit'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'Yggdroot/indentLine'
+"Plugin 'Yggdroot/indentLine'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -46,7 +46,7 @@ filetype plugin indent on    " required
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General Settings
 set softtabstop=2 shiftwidth=2 expandtab
-set mouse=a
+"set mouse=a
 
 set lazyredraw
 set ttyfast

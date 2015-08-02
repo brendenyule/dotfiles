@@ -5,3 +5,5 @@
 	default = matching
 [alias]
 	co = checkout
+[credentail]
+	helper = cache --timeout=2628000

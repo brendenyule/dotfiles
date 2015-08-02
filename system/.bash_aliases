@@ -7,7 +7,7 @@ alias fab='cd "/media/removable/UNTITLED/work/refable2.0"'
 alias cls='printf "\033c"'
 
 # Tmux color problem
-# alias tmux='tmux -2'
+alias tmux='tmux -2'
 
 alias news='newsbeuter'
 

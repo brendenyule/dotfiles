@@ -126,6 +126,10 @@ export BROWSER=lynx
 # Default editor
 export EDITOR=vim
 
+#Tmux
+#export PATH=$PATH:tmux/
+export PATH="~/tmux:$PATH"
+
 # Tmuxifier
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"

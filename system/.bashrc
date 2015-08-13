@@ -131,8 +131,11 @@ export EDITOR=vim
 export PATH="~/tmux:$PATH"
 
 # Tmuxifier
-export PATH="$HOME/.tmuxifier/bin:$PATH"
-eval "$(tmuxifier init -)"
+#export PATH="$HOME/.tmuxifier/bin:$PATH"
+#eval "$(tmuxifier init -)"
 
 BASH_ENV=$HOME/.zshenv
+
+# Gruvbox full color supprot
+source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 

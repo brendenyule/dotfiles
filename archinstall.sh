@@ -12,14 +12,16 @@ sudo ln -sfv "/home/doctorly/dotfiles/system/xinitrc" "/etc/X11/xinit/"
 
 ln -sfv "/home/doctorly/dotfiles/system/wm/.i3/" ~
 
-sudo apt-get install vim
-sudo apt-get install tmux
-sudo apt-get install i3
-sudo apt-get install conky
-sudo apt-get install irssi
-#sudo apt-get install udev
-sudo apt-get install udevil
-sudo apt-get install rxvt-unicode-256color
-sudo apt-get install wicd-curses
-sudo apt-get install compton
+pacman -S vim
+pacman -S tmux
+pacman -S i3
+pacman -S conky
+pacman -S irssi
+pacman -S install udev
+pacman -S udevil
+pacman -S rxvt-unicode-256color
+pacman -S wicd-curses
+pacman -S compton
+pacman -S the_silver_searcher
+pacman -S git
 

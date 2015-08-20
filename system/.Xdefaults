@@ -1,0 +1,66 @@
+! urxvt
+!URxvt.background: #101010
+!URxvt.foreground: #999993
+!URxvt.cursorColor: #395573
+!URxvt.cursorColor: #676767
+!URxvt.borderColor: #101010
+!URxvt.colorUL: #31658C
+
+URxvt.borderless: true
+!URxvt.internalBorder: 3
+!URxvt.externalBorder: 3
+URxvt.scrollBar: false
+!#URxvt.font: xft:terminus:pixelsize=11:antialias=false
+!#URxvt.boldFont: xft:terminus:bold:pixelsize=11:antialias=false
+
+URxvt.font: xft:UbuntuMono:pixelsize=18:antialias=true
+URxvt.boldFont: xft:UbuntuMono:pixelsize=18:antialias=true
+
+! transparency
+!URxvt.transparent: true
+!URxvt.tintColor: #101010
+!URxvt.shading: 4
+
+! clickable urls
+!URxvt.perl-ext-common: default,matcher,selection-to-clipboard
+URxvt.url-launcher: google-chrome
+URxvt.matcher.button: 1
+
+! tabs
+URxvt.tabbed.tabbar-bg: -1
+URxvt.tabbed.tabbar-fg: -2
+URxvt.tabbed.tab-bg: -2
+URxvt.tabbed.tab-fg: -1
+URxvt.tabbed.title-bg: -1
+URxvt.tabbed.title-fg: -2
+URxvt.tabbed.autohide: true
+URxvt.tabbed.new-button: false
+URxvt.tabbed.title: true
+
+
+! colours
+!#include "/home/doctorly/.colors/gaseg"
+!#include "/home/doctorly/.colors/rb15"
+!#include "/home/doctorly/.colors/jsch"
+!#include "/home/doctorly/.colors/s3r0"
+#include "/home/doctorly/.colors/hund"
+!#include "/home/doctorly/.colors/coral"
+
+! fade when out of focus
+URxvt.fadeColor: #000000
+URxvt.shading: 10
+URxvt.fading: 40
+URxvt.transparent: true
+ 
+! fonts
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+! copy paste
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.perl-ext-common: default,clipboard
+

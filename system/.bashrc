@@ -138,4 +138,3 @@ BASH_ENV=$HOME/.zshenv
 
 # Gruvbox full color supprot
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
-

@@ -10,5 +10,6 @@ alias cls='printf "\033c"'
 alias tmux='tmux -2'
 
 alias news='newsbeuter'
+alias network='wicd-curses'
 
 #alias feed='tmux new-session -s feed "tmuxifier w feed"'

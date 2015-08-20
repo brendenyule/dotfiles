@@ -66,7 +66,7 @@ colors gruvbox
 :syntax on
 set background=dark
 set colorcolumn=81
-highlight colorcolumn ctermbg=black
+highlight colorcolumn ctermbg=236
 set number
 
 
@@ -113,3 +113,8 @@ if executable('ag')
  "ag is fast enough that CtrlP doesn't need to cache
    let g:ctrlp_use_caching = 0
 endif
+
+hi link EasyMotionTarget Typedef
+hi link EasyMotionShade  Comment
+hi link EasyMotionTarget2First Conditional
+hi link EasyMotionTarget2Second Statement

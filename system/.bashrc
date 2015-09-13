@@ -138,3 +138,7 @@ BASH_ENV=$HOME/.zshenv
 
 # Gruvbox full color supprot
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+
+# Add local bin to path
+export PATH=$PATH:$HOME/.bin
+

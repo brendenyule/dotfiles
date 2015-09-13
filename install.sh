@@ -17,9 +17,9 @@ sudo apt-get install tmux
 sudo apt-get install i3
 sudo apt-get install conky
 sudo apt-get install irssi
-#sudo apt-get install udev
 sudo apt-get install udevil
 sudo apt-get install rxvt-unicode-256color
 sudo apt-get install wicd-curses
 sudo apt-get install compton
+sudo apt-get install unclutter
 

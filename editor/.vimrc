@@ -24,6 +24,7 @@ Plugin 'https://github.com/tmhedberg/matchit'
 Plugin 'Lokaltog/vim-easymotion'
 "Plugin 'Yggdroot/indentLine'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'bronson/vim-trailing-whitespace'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -50,6 +51,7 @@ set softtabstop=2 shiftwidth=2 expandtab
 
 set lazyredraw
 set ttyfast
+set clipboard^=unnamed
 
 " Shortcuts
 nnoremap <leader>s :w<CR>

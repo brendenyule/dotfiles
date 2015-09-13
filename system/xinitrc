@@ -1,9 +1,6 @@
 #!/bin/sh
-
 # /etc/X11/xinit/xinitrc
-#
 # global xinitrc file, used by all X sessions started by xinit (startx)
-
 # invoke global X session script
 . /etc/X11/Xsession
 
@@ -49,8 +46,11 @@ xrdb ~/.Xdefaults
 # exec startxfce4                                                                
 # ...or the Window Manager of your choice                                        
 #exec i3                                                                         
-                                                                                 
-exec i3 -V >> ~/logs/i3/i3log-$(date +'%F-%k-%M-%S') 2>&1         
 
 xbacklight = 10
+xinput set-prop 11 "Synaptics Two-Finger Scrolling" 1, 1
+xinput set-prop 11 "Synaptics Palm Detection" 1
+xinput set-prop 11 "Synaptics Palm Dimensions" 5, 80
+
+exec i3 -V >> ~/logs/i3/i3log-$(date +'%F-%k-%M-%S') 2>&1         
 

@@ -1,28 +1,14 @@
 ! urxvt
-!URxvt.background: #101010
-!URxvt.foreground: #999993
-!URxvt.cursorColor: #395573
-!URxvt.cursorColor: #676767
-!URxvt.borderColor: #101010
-!URxvt.colorUL: #31658C
 
 URxvt.borderless: true
 !URxvt.internalBorder: 3
 !URxvt.externalBorder: 3
 URxvt.scrollBar: false
-!#URxvt.font: xft:terminus:pixelsize=11:antialias=false
-!#URxvt.boldFont: xft:terminus:bold:pixelsize=11:antialias=false
 
-URxvt.font: xft:UbuntuMono:pixelsize=18:antialias=true
-URxvt.boldFont: xft:UbuntuMono:pixelsize=18:antialias=true
-
-! transparency
-!URxvt.transparent: true
-!URxvt.tintColor: #101010
-!URxvt.shading: 4
+URxvt.font: xft:UbuntuMono:pixelsize=20:antialias=true
+URxvt.boldFont: xft:UbuntuMono:pixelsize=20:antialias=true
 
 ! clickable urls
-!URxvt.perl-ext-common: default,matcher,selection-to-clipboard
 URxvt.url-launcher: google-chrome
 URxvt.matcher.button: 1
 
@@ -51,7 +37,7 @@ URxvt.fadeColor: #000000
 URxvt.shading: 10
 URxvt.fading: 40
 URxvt.transparent: true
- 
+
 ! fonts
 Xft.dpi:        96
 Xft.antialias:  true

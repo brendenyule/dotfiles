@@ -160,6 +160,7 @@ bindcode $mod+73 exec xbacklight +1
 
 # Colors
 set $black      #002B36
+set $borblack   #000000
 set $white      #839496
 set $gray       #CCCCCC
 set $darkgray   #666666
@@ -171,11 +172,11 @@ set $orange     #E59847
 set $cyan       #2AA198
 set $dark       #00252E
 
-# Window colors                 border  backgr. text    indicator
-client.focused                  $white  $white  $dark   $dark
-client.unfocused                $dark   $dark   $white  $white
-client.focused_inactive $dark   $dark   $white  $dark
-client.urgent                   $orange $orange $dark   $white
+# Window colors                 border  backgr.    text    indicator
+client.focused                  $white  $borblack  $dark   $dark
+client.unfocused                $dark   $dark      $white  $white
+client.focused_inactive         $dark   $dark      $white  $dark
+client.urgent                   $orange $orange    $dark   $white
 
 bar {
   position bottom

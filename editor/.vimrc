@@ -83,6 +83,16 @@ let g:ctrlp_cmd = 'CtrlP'
 map <Leader> <Plug>(easymotion-prefix)
 map s <Plug>(easymotion-bd-w)
 
+hi link EasyMotionTarget Typedef
+hi link EasyMotionShade  Comment
+hi link EasyMotionTarget2First Conditional
+hi link EasyMotionTarget2Second Statement
+
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>h <Plug>(easymotion-linebackward)
+
+let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+
 " Leaders
 map <space> <leader>
 
@@ -116,7 +126,3 @@ if executable('ag')
    let g:ctrlp_use_caching = 0
 endif
 
-hi link EasyMotionTarget Typedef
-hi link EasyMotionShade  Comment
-hi link EasyMotionTarget2First Conditional
-hi link EasyMotionTarget2Second Statement

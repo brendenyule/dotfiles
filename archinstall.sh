@@ -1,3 +1,7 @@
+#---THINGS YOU WILL NEED---
+#
+#
+#https://github.com/radiosilence/irssi-dunst
 ln -sfv "/home/doctorly/dotfiles/editor/.tmux.conf" ~
 ln -sfv "/home/doctorly/dotfiles/editor/.vimrc" ~
 
@@ -12,16 +16,19 @@ sudo ln -sfv "/home/doctorly/dotfiles/system/xinitrc" "/etc/X11/xinit/"
 
 ln -sfv "/home/doctorly/dotfiles/system/wm/.i3/" ~
 
-pacman -S vim
-pacman -S tmux
-pacman -S i3
-pacman -S conky
-pacman -S irssi
-pacman -S install udev
-pacman -S udevil
-pacman -S rxvt-unicode-256color
-pacman -S wicd-curses
-pacman -S compton
-pacman -S the_silver_searcher
-pacman -S git
+sudo pacman -S vim
+sudo pacman -S neovim
+sudo pacman -S tmux
+sudo pacman -S i3
+sudo pacman -S conky
+sudo pacman -S dunst
+sudo pacman -S mutt
+sudo pacman -S irssi
+sudo pacman -S install udev
+sudo pacman -S udevil
+sudo pacman -S rxvt-unicode-patched
+sudo pacman -S compton
+sudo pacman -S the_silver_searcher
+sudo pacman -S unclutter
+sudo pacman -S chromium
 

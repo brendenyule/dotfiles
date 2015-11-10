@@ -121,20 +121,20 @@ source ~/.rvm/scripts/rvm
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # Default browser
-export BROWSER=lynx 
+export BROWSER=chromium
 
 # Default editor
 export EDITOR=vim
 
 #Tmux
 #export PATH=$PATH:tmux/
-export PATH="~/tmux:$PATH"
+#export PATH="~/tmux:$PATH"
 
 # Tmuxifier
 #export PATH="$HOME/.tmuxifier/bin:$PATH"
 #eval "$(tmuxifier init -)"
 
-BASH_ENV=$HOME/.zshenv
+#BASH_ENV=$HOME/.zshenv
 
 # Gruvbox full color supprot
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"

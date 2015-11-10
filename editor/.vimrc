@@ -46,6 +46,8 @@ filetype plugin indent on    " required
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General Settings
+set nohlsearch
+set noincsearch
 set softtabstop=2 shiftwidth=2 expandtab
 "set mouse=a
 

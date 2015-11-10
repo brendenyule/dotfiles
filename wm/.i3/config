@@ -205,6 +205,7 @@ exec xbacklight = 5
 exec xinput set-prop 11 "Synaptics Two-Finger Scrolling" 1, 1
 exec xinput set-prop 11 "Synaptics Palm Detection" 1
 exec xinput set-prop 11 "Synaptics Palm Dimensions" 5, 80
+exec usermod -a -G input doctorly
 
-exec google-chrome
+exec chromium
 

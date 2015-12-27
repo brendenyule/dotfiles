@@ -200,6 +200,7 @@ exec urxvtd -q -o -f
 exec devmon &
 exec xrdb .Xdefaults
 exec xbacklight = 5
+exec compton
 
 # Set touchpad settings
 exec xinput set-prop 11 "Synaptics Two-Finger Scrolling" 1, 1

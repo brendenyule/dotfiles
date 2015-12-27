@@ -63,6 +63,9 @@ nnoremap <leader>s :w<CR>
 set swapfile
 set dir=~/tmp
 
+" Make
+autocmd FileType make setlocal noexpandtab
+
 " Themes
 set t_Co=256
 "colors cobalt2

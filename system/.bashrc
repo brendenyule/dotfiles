@@ -124,7 +124,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export BROWSER=chromium
 
 # Default editor
-export EDITOR=vim
+export EDITOR=nvim
 
 #Tmux
 #export PATH=$PATH:tmux/
@@ -134,7 +134,6 @@ export EDITOR=vim
 #export PATH="$HOME/.tmuxifier/bin:$PATH"
 #eval "$(tmuxifier init -)"
 
-#BASH_ENV=$HOME/.zshenv
 
 # Gruvbox full color supprot
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"

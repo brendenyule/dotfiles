@@ -15,3 +15,7 @@ alias network='wicd-curses'
 alias vim='nvim'
 
 #alias feed='tmux new-session -s feed "tmuxifier w feed"'
+
+#backup system using rspec
+alias backup='rsync -aAXv --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} /* /run/media/doctorly/UNTITLED/backup'
+

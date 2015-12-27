@@ -10,8 +10,8 @@ if_up_strictness     address
 override_utf8_locale no
 use_xft              yes
 
-# execpi 10 
-# "full_text": "${execpi 60 python3 ~/bin/gmail.py} ","color":"\#a6a6a6"  
+# execpi 10
+# "full_text": "${execpi 60 python3 ~/bin/gmail.py} ","color":"\#a6a6a6"
 #fire
 #facebooksquare
 #facebookf
@@ -19,21 +19,21 @@ use_xft              yes
 
 TEXT
 [
-  
+
   #${if_match ${execpi 600 python3 ~/.bin/gmail.py}>0}{"full_text": "", "color" : "\#799F26"},\
   #$else{"full_text": "", "color" : "\#839496"},$endif\
-  
-  {"full_text": "", "color" : "\#839496"},\
-  ${if_up wlan0}{"full_text": "${wireless_essid wlan0} [${wireless_link_qual_perc wlan0}%] ","color":"\#a6a6a6"},\
-  $else${if_up ppp0}{"full_text": "orange","color":"\#a6a6a6"},\
-  $else${if_up enp4s0}{"full_text": "enp4s0","color":"\#a6a6a6"},\
-  $else{"full_text": "no connection","color":"\#9C9C9C"},$endif$endif$endif\
-  
+
+  {"full_text": "", "color" : "\#839496"},
+  ${if_up wlp1s0}{"full_text": "${wireless_essid wlp1s0} [${wireless_link_qual_perc wlp1s0}%] ","color":"\#a6a6a6"},
+  $else${if_up ppp0}{"full_text": "orange","color":"\#a6a6a6"},
+  $else${if_up enp4s0}{"full_text": "enp4s0","color":"\#a6a6a6"},
+  $else{"full_text": "no connection","color":"\#9C9C9C"},$endif$endif$endif
+
   {"full_text": "", "color" : "\#839496"},\
   { "full_text" : "${battery_percent BAT0}% " , "color" :
   ${if_match ${battery_percent BAT0}<30}"\#B58900"${else}"\#799F26"${endif} },\
 #  {"full_text": "[$battery_percent%] ","color":"\#a6a6a6"},\
-  
+
   {"full_text": "", "color" : "\#839496"},\
   {"full_text": "${execpi 60 amixer sget Speaker | grep "Left:" | grep -oP '..%'
 }", "color":"\#a6a6a6"},\

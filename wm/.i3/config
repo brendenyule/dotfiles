@@ -180,7 +180,8 @@ client.urgent                   $orange $orange    $dark   $white
 
 bar {
   position bottom
-  font pango:Ubuntu Mono, FontAwesome 12
+  #font pango:Ubuntu Mono, FontAwesome 12
+  font pango:Ubuntu Mono, FontAwesome 18
   status_command ~/.i3/conky.sh
   tray_output none
 

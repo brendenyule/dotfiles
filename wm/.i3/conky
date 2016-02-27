@@ -35,7 +35,7 @@ TEXT
 #  {"full_text": "[$battery_percent%] ","color":"\#a6a6a6"},\
 
   {"full_text": "", "color" : "\#839496"},\
-  {"full_text": "${execpi 60 amixer sget Speaker | grep "Left:" | grep -oP '..%'
+  {"full_text": "${execpi 60 amixer sget Speaker | grep "Front Left:" | cut -d " " -f6
 }", "color":"\#a6a6a6"},\
 
   {"full_text": " ", "color" : "\#839496"},\

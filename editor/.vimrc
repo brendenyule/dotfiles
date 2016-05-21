@@ -5,42 +5,23 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call plug#begin()
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-Bundle 'morhetz/gruvbox'
-Bundle 'gertjanreynaert/cobalt2-vim-theme'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
-Bundle 'kien/ctrlp.vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'tpope/vim-rails'
-Plugin 'https://github.com/tmhedberg/matchit'
-Plugin 'Lokaltog/vim-easymotion'
-"Plugin 'Yggdroot/indentLine'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'bronson/vim-trailing-whitespace'
+Plug 'morhetz/gruvbox'
+Plug 'gertjanreynaert/cobalt2-vim-theme'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
+Plug 'kien/ctrlp.vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-rails'
+Plug 'https://github.com/tmhedberg/matchit'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'kchmck/vim-coffee-script'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-"filetype plugin on
-" To ignore plugin indent changes, instead use:
-"filetype plugin on"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
+call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General

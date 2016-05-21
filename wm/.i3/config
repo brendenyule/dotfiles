@@ -147,14 +147,28 @@ bindsym $mod+r mode "resize"
 #bindcode $mod+76 exec --no-startup-id pactl set-sink-volume 0 -- -10% && killall -SIGUSR1 i3status
 
 # Volume controls
-bindcode $mod+75 exec amixer -q set Speaker 2dB- unmute
-bindcode $mod+76 exec amixer -q set Speaker 2dB+ unmute
-bindcode $mod+74 exec amixer -q set Speaker toggle
+#bindcode $mod+75 exec amixer -q set Speaker 2dB- unmute
+#bindcode $mod+76 exec amixer -q set Speaker 2dB+ unmute
+#bindcode $mod+74 exec amixer -q set Speaker toggle
 
 # Backlight controls
-bindcode $mod+72 exec xbacklight -1
-bindcode $mod+73 exec xbacklight +1
+#bindcode $mod+72 exec xbacklight -1
+#bindcode $mod+73 exec xbacklight +1
 
+# Pulse Audio controls
+bindcode $mod+123 exec --no-startup-id pactl -- set-sink-volume 1 +5%  #increase sound volume
+bindcode $mod+122 exec --no-startup-id pactl -- set-sink-volume 1 -5%  #decrease sound volume
+bindcode $mod+121 exec --no-startup-id pactl -- set-sink-mute 1 toggle # mute sound
+
+# Sreen brightness controls
+bindsym $mod+XF86MonBrightnessUp exec xbacklight -inc 20   # increase screen brightness
+bindsym $mod+XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
@@ -181,7 +195,7 @@ client.urgent                   $orange $orange    $dark   $white
 bar {
   position bottom
   #font pango:Ubuntu Mono, FontAwesome 12
-  font pango:Ubuntu Mono, FontAwesome 18
+  font pango:Ubuntu Mono, FontAwesome 20
   status_command ~/.i3/conky.sh
   tray_output none
 
@@ -201,13 +215,14 @@ exec urxvtd -q -o -f
 exec devmon &
 exec xrdb .Xdefaults
 exec xbacklight = 5
+exec kbdlight set 0
 exec compton
 
 # Set touchpad settings
-exec xinput set-prop 11 "Synaptics Two-Finger Scrolling" 1, 1
-exec xinput set-prop 11 "Synaptics Palm Detection" 1
-exec xinput set-prop 11 "Synaptics Palm Dimensions" 5, 80
-exec usermod -a -G input doctorly
+#exec xinput set-prop 11 "Synaptics Two-Finger Scrolling" 1, 1
+#exec xinput set-prop 11 "Synaptics Palm Detection" 1
+#exec xinput set-prop 11 "Synaptics Palm Dimensions" 5, 80
+#exec usermod -a -G input doctorly
 
-exec chromium
+exec google-chrome
 

@@ -5,8 +5,8 @@ URxvt.borderless: true
 !URxvt.externalBorder: 3
 URxvt.scrollBar: false
 
-URxvt.font: xft:UbuntuMono:pixelsize=20:antialias=true
-URxvt.boldFont: xft:UbuntuMono:pixelsize=20:antialias=true
+URxvt.font: xft:UbuntuMono:pixelsize=18:antialias=true
+URxvt.boldFont: xft:UbuntuMono:pixelsize=18:antialias=true
 
 ! clickable urls
 URxvt.url-launcher: google-chrome
@@ -25,12 +25,12 @@ URxvt.tabbed.title: true
 
 
 ! colours
-!#include "/home/doctorly/.colors/gaseg"
-!#include "/home/doctorly/.colors/rb15"
-!#include "/home/doctorly/.colors/jsch"
-!#include "/home/doctorly/.colors/s3r0"
-#include "/home/doctorly/.colors/hund"
-!#include "/home/doctorly/.colors/coral"
+!#include "/home/brendenyule/.colors/gaseg"
+!#include "/home/brendenyule/.colors/rb15"
+!#include "/home/brendenyule/.colors/jsch"
+!#include "/home/brendenyule/.colors/s3r0"
+#include "/home/brendenyule/.colors/hund"
+!#include "/home/brendenyule/.colors/coral"
 
 ! fade when out of focus
 URxvt.fadeColor: #000000
@@ -50,6 +50,6 @@ URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755: False
 URxvt.perl-ext-common: default,clipboard
 
-! Number of lines'
+! Number of lines
 URxvt.saveLines: 100000
 

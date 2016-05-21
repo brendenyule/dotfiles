@@ -114,11 +114,11 @@ if ! shopt -oq posix; then
 fi
 
 # RVM
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-source ~/.rvm/scripts/rvm
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#source ~/.rvm/scripts/rvm
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+#export PATH="/usr/local/heroku/bin:$PATH"
 
 # Default browser
 export BROWSER=chromium
@@ -136,8 +136,11 @@ export EDITOR=nvim
 
 
 # Gruvbox full color supprot
-source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+source "$HOME/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh"
 
 # Add local bin to path
 export PATH=$PATH:$HOME/.bin
+
+# Disable keyboard backlight
+#echo 0 | sudo tee -a /sys/class/leds/smc::kbd_backlight/brightness
 

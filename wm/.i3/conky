@@ -19,6 +19,7 @@ use_xft              yes
 
 TEXT
 [
+  #{"full_text": "${execpi 60 ruby /run/media/doctorly/2cac840c-acc1-4ae4-9abd-8175eb7200cc/work/ruby/rubygmail/rgmail.rb testmailtestertesting#foobarbaz a}", "color":"\#a6a6a6"},\
 
   #${if_match ${execpi 600 python3 ~/.bin/gmail.py}>0}{"full_text": "", "color" : "\#799F26"},\
   #$else{"full_text": "", "color" : "\#839496"},$endif\
@@ -34,9 +35,9 @@ TEXT
   ${if_match ${battery_percent BAT0}<30}"\#B58900"${else}"\#799F26"${endif} },\
 #  {"full_text": "[$battery_percent%] ","color":"\#a6a6a6"},\
 
+
   {"full_text": "", "color" : "\#839496"},\
-  {"full_text": "${execpi 60 amixer sget Speaker | grep "Front Left:" | cut -d " " -f6
-}", "color":"\#a6a6a6"},\
+  {"full_text": "${execpi 60 amixer sget Speaker | grep "Front Left:" | cut -d " " -f6}", "color":"\#a6a6a6"},\
 
   {"full_text": " ", "color" : "\#839496"},\
   {"full_text": "${time %I:%M}","color":"\#a6a6a6"}

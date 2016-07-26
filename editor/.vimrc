@@ -46,6 +46,7 @@ filetype plugin indent on    " required
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General Settings
+set clipboard+=unnamedplus
 set nohlsearch
 set noincsearch
 set softtabstop=2 shiftwidth=2 expandtab

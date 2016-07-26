@@ -141,3 +141,4 @@ source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 # Add local bin to path
 export PATH=$PATH:$HOME/.bin
 
+export TERM='xterm-256color'

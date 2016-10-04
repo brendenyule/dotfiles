@@ -4,49 +4,35 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" vim-plug packaje manager
+call plug#begin()
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-Bundle 'morhetz/gruvbox'
-Bundle 'gertjanreynaert/cobalt2-vim-theme'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
-Bundle 'kien/ctrlp.vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'tpope/vim-rails'
-Plugin 'https://github.com/tmhedberg/matchit'
-Plugin 'Lokaltog/vim-easymotion'
-"Plugin 'Yggdroot/indentLine'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'bronson/vim-trailing-whitespace'
+Plug 'morhetz/gruvbox'
+Plug 'gertjanreynaert/cobalt2-vim-theme'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
+Plug 'kien/ctrlp.vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-rails'
+Plug 'iurifq/ctrlp-rails.vim'
+Plug 'https://github.com/tmhedberg/matchit'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'kchmck/vim-coffee-script'
+Plug 'ngmy/vim-rubocop'
+Plug 'justinmk/vim-sneak'
+Plug 'atelierbram/vim-colors_duotones'
+Plug 'thinca/vim-guicolorscheme'
+Plug 'ap/vim-buftabline'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-"filetype plugin on
-" To ignore plugin indent changes, instead use:
-"filetype plugin on"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
+call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General Settings
-set clipboard+=unnamedplus
 set nohlsearch
 set noincsearch
 set softtabstop=2 shiftwidth=2 expandtab
@@ -56,13 +42,26 @@ set lazyredraw
 set ttyfast
 set clipboard^=unnamed
 
-" Shortcuts
+"syntax highlight only first 120 characters
+set synmaxcol=200
+
+" Save
 nnoremap <leader>s :w<CR>
+
+" Goto previous file
+map <Leader>p <C-^>
 
 " Swap File
 " removes clutter files that vim leaves everywhere
 set swapfile
 set dir=~/tmp
+
+" Buffer navigation
+set hidden
+map <A-l> :bn<CR>
+map <A-h> :bp<CR>
+map <A-q> :bd<CR>
+":map <press Ctrl-V><press Ctrl-K> :ls<press Ctrl-V><press Enter>
 
 " Make
 autocmd FileType make setlocal noexpandtab
@@ -71,7 +70,7 @@ autocmd FileType make setlocal noexpandtab
 set t_Co=256
 "colors cobalt2
 colors gruvbox
-:syntax on
+syntax on
 set background=dark
 set colorcolumn=81
 highlight colorcolumn ctermbg=236
@@ -81,12 +80,28 @@ set number
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin Configuration
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Goto previous file
-map <Leader>p <C-^>
+"Sneak
+"let g:sneak#streak = 1
+"map f <Plug>Sneak_S
+"map s H<Plug>(SneakStreak)
+"map <leader>f H<Plug>
+"nmap F <Plug>Sneak_S
+"xmap f <Plug>Sneak_s
+"xmap F <Plug>Sneak_S
+"omap f <Plug>Sneak_s
+"omap F <Plug>Sneak_S<Paste>
 
 " Ctrlp
+let g:ctrlp_match_window = 'bottom,results:100'
+let g:ctrlp_max_files = 0
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+" Ctrlp Rails
+" There are more of these for migrations etc.
+map <C-S-m> :CtrlPModels<CR>
+map <C-S-c> :CtrlPControllers<CR>
+"map <C-S-v> :CtrlPViews<CR>
+map <C-S-s> :CtrlPSpecs<CR>
 
 " Easymotion
 map <Leader> <Plug>(easymotion-prefix)
@@ -125,7 +140,7 @@ nnoremap <leader>e :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 " The Silver Searcher
 if executable('ag')
  " Use ag over grep
-   set grepprg=ag\ --nogroup\ --nocolor
+   set grepprg=ag
 
      " Use ag in CtrlP for listing files. Lightning fast and respects
      ".gitignore
@@ -134,4 +149,3 @@ if executable('ag')
  "ag is fast enough that CtrlP doesn't need to cache
    let g:ctrlp_use_caching = 0
 endif
-

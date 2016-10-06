@@ -66,6 +66,7 @@ ln -sfv "/home/doctorly/dotfiles/system/.bashrc" ~
 ln -sfv "/home/doctorly/dotfiles/system/.colors" ~
 ln -sfv "/home/doctorly/dotfiles/system/.gitconfig" ~
 ln -sfv "/home/doctorly/dotfiles/system/.Xdefaults" ~
+ln -sfv "/home/doctorly/dotfiles/system/compton.conf" "/home/doctorly/.config/"
 
 #sudo ln -sfv "/home/doctorly/dotfiles/system/xkb/" "/usr/share/X11/"
 sudo ln -sfv "/home/doctorly/dotfiles/system/xinitrc" "/home/doctorly/.xinitrc"

@@ -1,4 +1,4 @@
-#---THINGS YOU WILL NEED---
+#---THINGS YOU WILL NEED-
 # Font Rendering: Infintality
 #
 
@@ -8,6 +8,7 @@
 
 #sudo pacman -S install udev
 #sudo pacman -S udevil
+sudo pacman -S base-devel
 sudo pacman -S chromium
 sudo pacman -S compton
 sudo pacman -S conky
@@ -25,7 +26,9 @@ sudo pacman -S the_silver_searcher
 sudo pacman -S tmux
 sudo pacman -S unclutter
 sudo pacman -S vim
-sudo pacmna -S base-devel
+sudo pacman -S xf86-input-libinput
+
+sudo pacman -Rs xf86-input-synaptics
 
 mkdir aur
 cd aur
@@ -36,11 +39,18 @@ cd ..
 git clone https://aur.archlinux.org/yaourt.git
 cd yaourt
 makepkg -sri
+cd ..
+
+https://aur.archlinux.org/light.git
+cd light
+makepkg -sri
 cd
 
 yaourt -S rxvt-unicode-patched
 yaourt -S ttf-ubuntu-font-family
 yaourt -S ttf-font-awesome
+yaourt -S light
+yaourt -S tintin
 
 
 #neovim plugin manager
@@ -60,9 +70,9 @@ ln -sfv "/home/doctorly/dotfiles/system/.Xdefaults" ~
 #sudo ln -sfv "/home/doctorly/dotfiles/system/xkb/" "/usr/share/X11/"
 sudo ln -sfv "/home/doctorly/dotfiles/system/xinitrc" "/home/doctorly/.xinitrc"
 
-mkdir -p /home/logs/i3
-ln -sfv "/home/doctorly/dotfiles/system/wm/.i3/config" "/home/doctorly/.i3/config"
-ln -sfv "/home/doctorly/dotfiles/system/wm/.i3/conky" "/home/doctorly/.i3/conky"
-ln -sfv "/home/doctorly/dotfiles/system/wm/.i3/conky.sh" "/home/doctorly/.i3/conky.sh"
+mkdir -p /home/doctorly/logs/i3
+ln -sf "/home/doctorly/dotfiles/wm/.i3/config" "/home/doctorly/.i3/config"
+ln -sf "/home/doctorly/dotfiles/wm/.i3/conky" "/home/doctorly/.i3/conky"
+ln -sf "/home/doctorly/dotfiles/wm/.i3/conky.sh" "/home/doctorly/.i3/conky.sh"
 sudo cp -rf "/home/doctorly/dotfiles/system/xkb/" "/usr/share/X11/"
 

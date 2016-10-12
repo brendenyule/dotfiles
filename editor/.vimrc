@@ -26,6 +26,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'atelierbram/vim-colors_duotones'
 Plug 'thinca/vim-guicolorscheme'
 Plug 'ap/vim-buftabline'
+Plug 'dracula/vim'
 
 call plug#end()
 
@@ -40,7 +41,8 @@ set softtabstop=2 shiftwidth=2 expandtab
 
 set lazyredraw
 set ttyfast
-set clipboard^=unnamed
+"set clipboard^=unnamed
+set clipboard+=unnamedplus
 
 "syntax highlight only first 120 characters
 set synmaxcol=200
@@ -70,6 +72,7 @@ autocmd FileType make setlocal noexpandtab
 set t_Co=256
 "colors cobalt2
 colors gruvbox
+"colors dracula
 syntax on
 set background=dark
 set colorcolumn=81

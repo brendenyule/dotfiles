@@ -157,45 +157,53 @@ bindcode $mod+73 exec light -A 2
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+  # COLOR CONFIGURATION START
+  # Colors
+  set $foreground  #bec2d4
+  set $background  #282A36
+  set $black       #000000
+  set $darkgray    #4D4D4D
+  set $darkred     #FF5555
+  set $red         #FF6E67
+  set $darkgreen   #50FA7B
+  set $green       #5AF78E
+  set $darkyellow  #F1FA8C
+  set $yellow      #F4F99D
+  set $darkblue    #CAA9FA
+  set $blue        #CAA9FA
+  set $darkmagenta #FF79C6
+  set $magenta     #FF92D0
+  set $darkcyan    #8BE9FD
+  set $cyan        #9AEDFE
+  set $lightgrey   #BFBFBF
+  set $lightgrey   #BFBFBF
+  set $white       #E6E6E6
+  # Window colors          border    backgr.      text    indicator
+  client.focused           darkgray  $black       $white  $darkgray
+  client.unfocused         darkgray  $black       $white  $darkgray
+  client.focused_inactive  darkgray  $black       $white  $darkgray
+  client.urgent            yellow    $darkyellow  $dark   $darkgray
 
-# Colors
-set $black      #002B36
-set $borblack   #000000
-set $white      #839496
-set $gray       #CCCCCC
-set $darkgray   #666666
-set $green      #799F26
-set $blue       #4D73AA
-set $purple     #8473A7
-set $red        #B58900
-set $orange     #E59847
-set $cyan       #2AA198
-set $dark       #00252E
+  bar {
+    position bottom
+    #font pango:Ubuntu Mono, FontAwesome 12
+    font pango:Ubuntu Mono, FontAwesome 18
+    status_command ~/.i3/conky.sh
+    tray_output none
 
-# Window colors                 border  backgr.    text    indicator
-client.focused                  $white  $borblack  $dark   $dark
-client.unfocused                $dark   $dark      $white  $white
-client.focused_inactive         $dark   $dark      $white  $dark
-client.urgent                   $orange $orange    $dark   $white
+    colors {
+      statusline      $foreground
+      background      $background
 
-bar {
-  position bottom
-  #font pango:Ubuntu Mono, FontAwesome 12
-  font pango:Ubuntu Mono, FontAwesome 18
-  status_command ~/.i3/conky.sh
-  tray_output none
-
-  colors {
-    statusline      #999999
-    background      $black
-
-    # Colors                border          backgr.         text
-    focused_workspace       $white          $white          $black
-    active_workspace        #073642         #073642         #696f89
-    inactive_workspace      #073642         #073642         $white
-    urgent_workspace        $orange         $orange         $dark
+      # Colors                border          backgr.             text
+      focused_workspace       $foreground     $foreground         $background
+      active_workspace        $foreground     $background         $foreground
+      inactive_workspace      $foreground     $background         $foreground
+      urgent_workspace        $yellow         $darkyellow         $dark
+    }
   }
-}
+
+# COLOR CONFIGURATION END
 
 exec urxvtd -q -o -f
 exec devmon &

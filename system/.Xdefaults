@@ -50,9 +50,10 @@ Xft.hinting:    true
 Xft.hintstyle:  hintslight
 
 ! copy paste
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755: False
 URxvt.perl-ext-common: default,clipboard
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 
 ! Number of lines
 URxvt.saveLines: 100000

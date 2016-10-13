@@ -1,6 +1,5 @@
 #---THINGS YOU WILL NEED-
 # Font Rendering: Infintality
-#
 
 #need i3 log directory
 #need copy-paste support for urxvt
@@ -13,6 +12,7 @@ sudo pacman -S chromium
 sudo pacman -S compton
 sudo pacman -S conky
 sudo pacman -S curl
+sudo pacman -S dmenu
 sudo pacman -S dunst
 sudo pacman -S git
 sudo pacman -S htop
@@ -76,4 +76,7 @@ ln -sf "/home/doctorly/dotfiles/wm/.i3/config" "/home/doctorly/.i3/config"
 ln -sf "/home/doctorly/dotfiles/wm/.i3/conky" "/home/doctorly/.i3/conky"
 ln -sf "/home/doctorly/dotfiles/wm/.i3/conky.sh" "/home/doctorly/.i3/conky.sh"
 sudo cp -rf "/home/doctorly/dotfiles/system/xkb/" "/usr/share/X11/"
+
+sudo ln -sf "/home/doctorly/dotfiles/system/urxvtclip" "/usr/lib/urxvt/perl/clipboard"
+sudo ln -sf "/home/doctorly/dotfiles/system/urxvtclip" "/usr/lib64/urxvt/perl/clipboard"
 

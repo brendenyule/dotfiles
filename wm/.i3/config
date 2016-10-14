@@ -159,25 +159,25 @@ bindcode $mod+73 exec light -A 2
 # finds out, if available)
   # COLOR CONFIGURATION START
   # Colors
-  set $foreground  #bec2d4
-  set $background  #282A36
-  set $black       #000000
-  set $darkgray    #4D4D4D
-  set $darkred     #FF5555
-  set $red         #FF6E67
-  set $darkgreen   #50FA7B
-  set $green       #5AF78E
-  set $darkyellow  #F1FA8C
-  set $yellow      #F4F99D
-  set $darkblue    #CAA9FA
-  set $blue        #CAA9FA
-  set $darkmagenta #FF79C6
-  set $magenta     #FF92D0
-  set $darkcyan    #8BE9FD
-  set $cyan        #9AEDFE
-  set $lightgrey   #BFBFBF
-  set $lightgrey   #BFBFBF
-  set $white       #E6E6E6
+  set $foreground  #a1b5a1
+  set $background  #2a2d2a
+  set $black       #2a2d2a
+  set $darkgray    #535f53
+  set $darkred     #5c705c
+  set $red         #cbe25a
+  set $darkgreen   #bfd454
+  set $green       #353b35
+  set $darkyellow  #e5fb79
+  set $yellow      #485148
+  set $darkblue    #687d68
+  set $blue        #5e6e5e
+  set $darkmagenta #bfd454
+  set $magenta     #c8e4c8
+  set $darkcyan    #8fae8f
+  set $cyan        #b1c44f
+  set $lightgrey   #a1b5a1
+  set $lightgrey   #a1b5a1
+  set $white       #f0fff0
   # Window colors          border    backgr.      text    indicator
   client.focused           darkgray  $black       $white  $darkgray
   client.unfocused         darkgray  $black       $white  $darkgray

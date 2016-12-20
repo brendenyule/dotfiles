@@ -7,8 +7,12 @@ filetype off                  " required
 " vim-plug packaje manager
 call plug#begin()
 
+" Themes
 Plug 'morhetz/gruvbox'
 Plug 'gertjanreynaert/cobalt2-vim-theme'
+Plug 'atelierbram/vim-colors_duotones'
+
+" Everything else
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
@@ -21,11 +25,11 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'kchmck/vim-coffee-script'
-Plug 'ngmy/vim-rubocop'
-Plug 'justinmk/vim-sneak'
-Plug 'atelierbram/vim-colors_duotones'
-Plug 'thinca/vim-guicolorscheme'
+"Plug 'thinca/vim-guicolorscheme'
 Plug 'ap/vim-buftabline'
+"Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -94,17 +98,26 @@ set number
 "omap f <Plug>Sneak_s
 "omap F <Plug>Sneak_S<Paste>
 
+
 " Ctrlp
 let g:ctrlp_match_window = 'bottom,results:100'
 let g:ctrlp_max_files = 0
-let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = '<c-u>'
 let g:ctrlp_cmd = 'CtrlP'
+
 " Ctrlp Rails
 " There are more of these for migrations etc.
 map <C-S-m> :CtrlPModels<CR>
 map <C-S-c> :CtrlPControllers<CR>
 "map <C-S-v> :CtrlPViews<CR>
 map <C-S-s> :CtrlPSpecs<CR>
+"let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+nnoremap <silent> <C-p> :FZF -m<cr>
+nnoremap <silent> <C-p> :FZF -m<cr>
+nnoremap <C-i> :Ag! 
+nnoremap <C-S-o> :Ag! <C-R><C-W><CR>
+vnoremap <C-S-o> "xy:Ag! <C-R>x<CR>
 
 " Easymotion
 map <Leader> <Plug>(easymotion-prefix)
@@ -150,6 +163,7 @@ if executable('ag')
        let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
  "ag is fast enough that CtrlP doesn't need to cache
-   let g:ctrlp_use_caching = 0
+   "let g:ctrlp_use_caching = 1
+   "let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 endif
 

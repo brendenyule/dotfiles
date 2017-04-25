@@ -27,8 +27,9 @@ sudo pacman -S tmux
 sudo pacman -S unclutter
 sudo pacman -S vim
 sudo pacman -S xf86-input-libinput
+sudo pacman -S xf86-video-intel
 
-sudo pacman -Rs xf86-input-synaptics
+#sudo pacman -Rs xf86-input-synaptics
 
 mkdir aur
 cd aur
@@ -51,7 +52,7 @@ yaourt -S ttf-ubuntu-font-family
 yaourt -S ttf-font-awesome
 yaourt -S light
 yaourt -S tintin
-
+yaourt -S linux-macbook
 
 #neovim plugin manager
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \

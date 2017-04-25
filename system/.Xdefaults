@@ -33,7 +33,7 @@ URxvt.boldFont: xft:UbuntuMono:pixelsize=20:antialias=true
 !#include "/home/doctorly/.colors/coral"
 
 ! COLOR CONFIGURATION START
-#include "/home/doctorly/.colors/drk"
+#include "/home/doctorly/.colors/base2tone-desert-dark"
 ! COLOR CONFIGURATION END
 
 ! fade when out of focus
